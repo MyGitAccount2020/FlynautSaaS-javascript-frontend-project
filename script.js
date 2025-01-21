@@ -1,3 +1,16 @@
+// -------navbar----
+// Toggle menu visibility on hamburger click
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
+
+// Close menu when close button is clicked
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.remove('active');
+});
+
+// -------------------
+
 document.getElementById('dropdownBtn').addEventListener('click', function (e) {
     e.preventDefault();
     const menu = document.getElementById('dropdownMenu');
@@ -34,14 +47,14 @@ goToTopBtn.addEventListener('click', function (e) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ---------------------------first image slider
+// ---------------------------first image slider-testnomial
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.unique-swiper-container', {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.unique-swiper-pagination',
             clickable: true,
         },
         autoplay: {
@@ -49,36 +62,47 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 })
-// -------------second image sliding--------
-document.addEventListener("DOMContentLoaded", function () {
-    var swiperSecondary = new Swiper('.swiper-container-secondary', {
-        slidesPerView: 3, 
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 3000,
-        },
-        loop: true,
-    });
+
+
+// ------------- wedding sliding--------
+document.addEventListener('DOMContentLoaded', () => {
+var swiper = new Swiper('.swiper-container-secondary', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    breakpoints: {
+        el: '.swiper-pagination',
+        500: {
+            slidesPerView: 3,
+            spaceBetween: 1, 
+        }
+    }
+});
 });
 
 // --------------sidebar-------------------
 function openSidebar(sidebarId) {
     const sidebar = document.getElementById(sidebarId);
     sidebar.classList.add('open');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
 
-// function closeSidebar(sidebarId) {
-//     const sidebar = document.getElementById(sidebarId);
-//     sidebar.classList.remove('open');
-// }
+function closeSidebar(sidebarId) {
+    const sidebar = document.getElementById(sidebarId);
+    sidebar.classList.remove('open');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
 
 // ----------------------------------------
 const sliderWrapper = document.querySelector(".slider-wrapper");
@@ -87,12 +111,12 @@ const pagination = document.querySelectorAll(".pagination-circle");
 const slideWidth = slides[0].offsetWidth + 10;
 let currentIndex = 2; 
 
-// Function to update slide position
+
 function updateSlider() {
     const offset = -((currentIndex - 2) * slideWidth);
     sliderWrapper.style.transform = `translateX(${offset}px)`;
 
-    // Update pagination active state
+
     pagination.forEach((circle, index) => {
         circle.classList.toggle("active", index === currentIndex);
     });
@@ -104,7 +128,7 @@ function autoSlide() {
     updateSlider();
 }
 
-let slideInterval = setInterval(autoSlide, 3000); // Slide every 3 seconds
+let slideInterval = setInterval(autoSlide, 3000); 
 
 // Manual slider via pagination
 pagination.forEach((circle, index) => {
@@ -112,7 +136,7 @@ pagination.forEach((circle, index) => {
         clearInterval(slideInterval); 
         currentIndex = index;
         updateSlider();
-        slideInterval = setInterval(autoSlide, 1000); // Restart auto-sliding
+        slideInterval = setInterval(autoSlide, 1000);
     });
 });
 

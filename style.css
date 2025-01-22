@@ -93,7 +93,6 @@ body {
         flex-direction: column;
         align-items: center;
     }
-
     .navbar-links {
         display: none; /* Hide navbar links on mobile by default */
         position: absolute;
@@ -112,10 +111,14 @@ body {
     }
 
     .navbar.active .navbar-links {
+        font-size:10px;
+        font-weight: bold;
         display: flex;
         z-index: 100; 
     }
-
+    .navbar.active a.red-button{
+       margin-left: 3px;
+    }
     
     .navbar.active .hamburger {
         display: none;
@@ -604,7 +607,7 @@ body {
 
 .about-left img {
     max-width: 100%;
-    height: 77%;
+    height: 100%;
     border-radius: 8px;
 }
 
@@ -1468,6 +1471,7 @@ footer .social-icons a:hover {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .swiper-container {
+    gap: 0px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -1584,7 +1588,7 @@ footer .social-icons a:hover {
 
 .swiper-slide {
     position: absolute;
-    display: flex;
+    /* display: flex; */
     align-items: flex-end;
     justify-content: center;
     height: 400px;
@@ -1597,7 +1601,6 @@ footer .social-icons a:hover {
 .swiper-slide:hover {
     transform: scale(1.05);
 }
-
 .card {
     position: relative;
     height: 500px;
@@ -1608,8 +1611,19 @@ footer .social-icons a:hover {
     border-radius: 0;
     overflow: hidden;
 }
+.card2 {
+    position: relative;
+    min-width:600px;
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+    overflow: hidden;
+}
 
-.card .overlay {
+.card2 .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -1620,9 +1634,10 @@ footer .social-icons a:hover {
 }
 
 .card-content {
+    width: 80%;
     position: relative;
     z-index: 2;
-    /* padding: 20px; */
+    padding: 20px;
     color: white;
     text-align: start;
     font-size: 14px;
@@ -1630,13 +1645,17 @@ footer .social-icons a:hover {
 }
 
 .card-content h4 {
-    font-size: 18px;
+    font-size: 30px;
     margin: 10px 0;
 }
 
-.card-content p {
+.wedding-card-title-second {
     margin: 0;
     font-size: 14px;
+}
+.wedding-card-title{
+    font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -1644,15 +1663,38 @@ footer .social-icons a:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 70vh;
         width: 100%;
         background-size: cover;
         background-position: center;
         overflow: hidden;
     }
-
-    .card {
+.card-content{
+    width: 60%;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    color: white;
+    text-align: start;
+    font-size: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+    .card2 {
         margin-left: 5%;
+    }
+
+    .card-content h4 {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    
+    .wedding-card-title-second {
+        margin: 0;
+        font-size: 14px;
+    }
+    .wedding-card-title{
+        font-size: 25px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
     }
 }
 
@@ -2246,7 +2288,33 @@ footer .social-icons a:hover {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     color: red;
 }
+@media screen and (max-width: 768px) {
+    .slider-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5;
+    }
+    .highlight-frame {
+        position: absolute;
+        top: 45%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        width: 170px;
+        height: 174px;
+        border: 8px solid darkred;
+        z-index: 2;
+    }
+    .slide {
+        padding-top: 3%;
+        width: 100%;
+    }
 
+    .pagination-circle {
+        width: 10px;
+        height: 10px;
+    }
+}
 /* ------------------------------------ */
 
 /* Message Section */

@@ -139,6 +139,11 @@ pagination.forEach((circle, index) => {
         slideInterval = setInterval(autoSlide, 1000);
     });
 });
+// Update the slideWidth on window resize
+window.addEventListener("resize", () => {
+    slideWidth = slides[3].offsetWidth + 10; // Recalculate slide width
+    updateSlider(); // Adjust the slider position
+});
 
 // Initial setup
 updateSlider();

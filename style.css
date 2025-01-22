@@ -140,7 +140,7 @@ body {
 
     .navbar-links {
         position: absolute;
-        left: 30%;
+        left: 18%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -393,7 +393,7 @@ body {
     color: white;
     padding: 5px 15px;
     border-radius: 35px;
-    margin-left: 154px;
+    margin-left: 58%;
 }
 
 /* ----dropdown--------- */
@@ -1021,7 +1021,7 @@ footer .social-icons a:hover {
 @media screen and (max-width: 768px) {
     .navbar a {
         font-size: 14px;
-        margin: 0 8px;
+        margin: 0 24px;
     }
 
     .navbar a.yummy-link {
@@ -1063,7 +1063,7 @@ footer .social-icons a:hover {
 
     .navbar a {
         font-size: 12px;
-        margin: 5px 0;
+        margin: 5px 51px;
     }
 
     .navbar a.yummy-link {

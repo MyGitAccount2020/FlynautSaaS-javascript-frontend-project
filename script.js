@@ -1,11 +1,11 @@
 // -------navbar----
 // Toggle menu visibility on hamburger click
-document.querySelector('.hamburger').addEventListener('click', function() {
+document.querySelector('.hamburger').addEventListener('click', function () {
     document.querySelector('.navbar').classList.toggle('active');
 });
 
 // Close menu when close button is clicked
-document.querySelector('.close-btn').addEventListener('click', function() {
+document.querySelector('.close-btn').addEventListener('click', function () {
     document.querySelector('.navbar').classList.remove('active');
 });
 
@@ -66,28 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ------------- wedding sliding--------
 document.addEventListener('DOMContentLoaded', () => {
-var swiper = new Swiper('.swiper-container-secondary', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    autoplay: {
-        delay: 3000,
-    },
-    breakpoints: {
-        el: '.swiper-pagination',
-        500: {
-            slidesPerView: 3,
-            spaceBetween: 1, 
+    var swiper = new Swiper('.swiper-container-secondary', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            el: '.swiper-pagination',
+            500: {
+                slidesPerView: 3,
+                spaceBetween: 1,
+            }
         }
-    }
-});
+    });
 });
 
 // --------------sidebar-------------------
@@ -100,7 +100,7 @@ function openSidebar(sidebarId) {
 function closeSidebar(sidebarId) {
     const sidebar = document.getElementById(sidebarId);
     sidebar.classList.remove('open');
-    document.body.style.overflow = ''; // Restore scrolling
+    document.body.style.overflow = '';
 }
 
 
@@ -108,45 +108,56 @@ function closeSidebar(sidebarId) {
 const sliderWrapper = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".slide");
 const pagination = document.querySelectorAll(".pagination-circle");
-const slideWidth = slides[0].offsetWidth + 10;
-let currentIndex = 2; 
 
+let slideWidth = slides[0].offsetWidth + 10; // Initialize slide width
+let currentIndex = window.innerWidth >= 768 ? 2 : 0; // Start at the middle for desktop, first for mobile
 
 function updateSlider() {
-    const offset = -((currentIndex - 2) * slideWidth);
+    // Adjust the offset based on the current index and viewport size
+    const offset = window.innerWidth >= 768
+        ? -((currentIndex - 2) * slideWidth) // Center 3rd slide for desktop
+        : -(currentIndex * slideWidth); // Center 1st slide for mobile
     sliderWrapper.style.transform = `translateX(${offset}px)`;
 
+    // Highlight the active slide
+    slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentIndex);
+    });
 
+    // Update pagination
     pagination.forEach((circle, index) => {
         circle.classList.toggle("active", index === currentIndex);
     });
 }
 
-// Automatic slider function
+// Automatically slide through images
 function autoSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     updateSlider();
 }
 
-let slideInterval = setInterval(autoSlide, 3000); 
+let slideInterval = setInterval(autoSlide, 3000);
 
-// Manual slider via pagination
+// Manual navigation via pagination
 pagination.forEach((circle, index) => {
     circle.addEventListener("click", () => {
-        clearInterval(slideInterval); 
+        clearInterval(slideInterval);
         currentIndex = index;
         updateSlider();
-        slideInterval = setInterval(autoSlide, 1000);
+        slideInterval = setInterval(autoSlide, 3000);
     });
 });
-// Update the slideWidth on window resize
+
 window.addEventListener("resize", () => {
-    slideWidth = slides[3].offsetWidth + 10; // Recalculate slide width
-    updateSlider(); // Adjust the slider position
+    slideWidth = slides[0].offsetWidth + 10;
+    currentIndex = window.innerWidth >= 768 ? 2 : 0;
+    updateSlider();
 });
 
 // Initial setup
 updateSlider();
-
-
-// -----------------------------------------
+// ------------horizontal scrolling disable-----------
+window.addEventListener("resize", () => {
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+});

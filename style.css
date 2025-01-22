@@ -10,7 +10,7 @@ body {
 /* --------navbar--------- */
 .navbar {
     height: 105px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,18 +25,18 @@ body {
 
 .navbar-links {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     width: 60%;
     flex-grow: 1;
-    margin-left: 50px;
+    margin-left: -220px;
 }
 
 /* Navbar Link Style */
 .navbar a {
     text-decoration: none;
     color: rgb(86, 82, 82);
-    margin: 0 10px;
+    margin: -2 23px;
     font-size: 16px;
 }
 
@@ -47,7 +47,7 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
-    margin-right: auto; /* Push it to the left */
+    margin-right: auto;
 }
 
 /* Yummy Dot Styling */
@@ -64,7 +64,7 @@ body {
     color: white;
     padding: 5px 15px;
     border-radius: 35px;
-    margin-left: 0px;
+    margin-left: 57%;
 }
 
 /* Hamburger Button for Mobile (Positioned on the Right) */
@@ -73,7 +73,7 @@ body {
     font-size: 30px;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Position it on the right side */
+    right: 20px;
 }
 
 /* Close Button (Hidden by default) */
@@ -84,7 +84,7 @@ body {
     top: 20px;
     right: 20px;
     cursor: pointer;
-    display: none; /* Hide by default */
+    display: none;
 }
 
 /* Mobile View */
@@ -94,7 +94,7 @@ body {
         align-items: center;
     }
     .navbar-links {
-        display: none; /* Hide navbar links on mobile by default */
+        display: none;
         position: absolute;
         top: 0;
         left: 50;
@@ -114,12 +114,12 @@ body {
         font-size:10px;
         font-weight: bold;
         display: flex;
-        z-index: 100; 
+        z-index: 100;
     }
-    .navbar.active a.red-button{
-       margin-left: 3px;
+    .navbar.active a.red-button {
+        margin-left: 3px;
     }
-    
+
     .navbar.active .hamburger {
         display: none;
     }
@@ -140,7 +140,7 @@ body {
 
     .navbar-links {
         position: absolute;
-        left: 18%;
+        left: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -169,7 +169,7 @@ body {
     z-index: 1;
 }
 
-.dropdown:hover > .dropdown-content {
+.dropdown:hover>.dropdown-content {
     display: block;
 }
 
@@ -189,12 +189,12 @@ body {
     position: relative;
 }
 
-.deep-dropdown > a {
+.deep-dropdown>a {
     display: block;
     white-space: nowrap;
 }
 
-.deep-dropdown:hover > .deep-dropdown-content {
+.deep-dropdown:hover>.deep-dropdown-content {
     display: block;
 }
 
@@ -343,7 +343,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* --------navbar--------- */
@@ -387,14 +387,15 @@ body {
     padding-top: 20px;
 }
 
+/* 
 .navbar a.red-button {
     padding-left: 20px;
     background-color: rgb(180, 24, 24);
     color: white;
     padding: 5px 15px;
     border-radius: 35px;
-    margin-left: 58%;
-}
+    margin-left: 154px;
+} */
 
 /* ----dropdown--------- */
 .dropdown {
@@ -406,7 +407,6 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 150px;
-    /* Ensure enough width for single-line items */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -429,7 +429,6 @@ body {
     background-color: #ddd;
 }
 
-/* Deep dropdown styling */
 .deep-dropdown {
     position: relative;
 }
@@ -437,7 +436,6 @@ body {
 .deep-dropdown>a {
     display: block;
     white-space: nowrap;
-    /* Ensure "Deep Dropdown" remains on a single line */
 }
 
 .deep-dropdown:hover>.deep-dropdown-content {
@@ -462,9 +460,7 @@ body {
     padding: 8px 12px;
     text-decoration: none;
     display: block;
-    /* Ensures each item is on a new line */
     white-space: nowrap;
-    /* Prevents text from wrapping */
 }
 
 .deep-dropdown-content a:hover {
@@ -554,7 +550,6 @@ body {
     }
 }
 
-/* -----About us-------- */
 /* --------------------About Us Section---------------------- */
 .about-us {
     text-align: center;
@@ -569,11 +564,11 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.learn-more-about-us-subheading{
+.learn-more-about-us-subheading {
     color: red;
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
-.italic-lorem-text{
+.italic-lorem-text {
     font-style: italic;
     color: rgb(110, 107, 107);
 }
@@ -596,18 +591,18 @@ body {
 }
 
 .about-left {
-    flex: 1 1 48%; 
+    flex: 1 1 48%;
     text-align: center;
     position: relative;
-    min-height: 400px; 
+    min-height: 400px;
 }
-.book-a-table-mobile-number{
+.book-a-table-mobile-number {
     color: red;
 }
 
 .about-left img {
     max-width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 8px;
 }
 
@@ -681,7 +676,7 @@ body {
 
 .youtube-video img {
     width: 115%;
-    height: auto; 
+    height: auto;
     border-radius: 0px;
 }
 
@@ -717,7 +712,7 @@ body {
 
     .about-left img {
         max-width: 80%;
-        margin-bottom: 20px;
+        margin-bottom: 45%;
     }
 
     .info-box {
@@ -757,8 +752,8 @@ body {
 
 .youtube-thumbnail {
     width: 100%;
-    height: 250px; 
-    object-fit: cover; 
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -788,7 +783,7 @@ body {
 
 @keyframes rotateAnimation {
     0% {
-        transform: translate(-50%, -50%) ;
+        transform: translate(-50%, -50%);
         box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.5);
     }
     50% {
@@ -804,7 +799,7 @@ body {
 /* Adjust the spacing between the first image and the bordered box */
 .about-left .info-box {
     position: absolute;
-    bottom: 33px; 
+    bottom: 33px;
     left: 50%;
     width: 100%;
     max-width: 685px;
@@ -1004,6 +999,7 @@ footer .social-icons a:hover {
     }
 
     .about-left, .about-right {
+        min-height: 20px;
         width: 100%;
     }
 
@@ -1021,7 +1017,7 @@ footer .social-icons a:hover {
 @media screen and (max-width: 768px) {
     .navbar a {
         font-size: 14px;
-        margin: 0 24px;
+        margin: 0 8px;
     }
 
     .navbar a.yummy-link {
@@ -1063,7 +1059,7 @@ footer .social-icons a:hover {
 
     .navbar a {
         font-size: 12px;
-        margin: 5px 51px;
+        margin: 5px 0;
     }
 
     .navbar a.yummy-link {
@@ -1105,30 +1101,30 @@ footer .social-icons a:hover {
 /* --------------------------------------------------------------------------------------- */
 /* Stats Section */
 .stats-section {
-    position: relative; /* Make the container position relative */
+    position: relative;
     text-align: center;
 }
 
 .stats-image {
     width: 100%;
-    height: 400px; /* You can adjust this as needed */
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
     filter: brightness(50%);
 }
 
 .stats-overlay {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    gap: 100px; 
-    color: white; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    color: white;
     padding: 20px;
     border-radius: 10px;
 }
@@ -1138,7 +1134,7 @@ footer .social-icons a:hover {
     background-color: transparent;
     padding: 15px;
     border-radius: 10px;
-    width: 150px; 
+    width: 150px;
     margin: 10px;
 }
 
@@ -1203,12 +1199,12 @@ footer .social-icons a:hover {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgb(103, 100, 100);  /* Permanent black border */
+    background-color: rgb(103, 100, 100);
     transition: background-color 0.3s ease;
 }
 
 .unique-menu-btn.active::after {
-    background-color: red; /* Red underline when active */
+    background-color: red;
 }
 
 .unique-menu-btn:hover {
@@ -1218,24 +1214,24 @@ footer .social-icons a:hover {
 /* Medium Devices (Tablets) */
 @media screen and (max-width: 1024px) {
     .unique-menu-btn {
-        font-size: 14px; /* Slightly smaller font size */
-        padding: 8px 16px; /* Adjust padding for tablets */
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     .unique-menu-nav {
-        gap: 15px; /* Less gap between buttons */
+        gap: 15px;
     }
 }
 
 /* Small Devices (Mobile) */
 @media screen and (max-width: 768px) {
     .unique-menu-btn {
-        font-size: 12px; /* Smaller font size for mobile */
-        padding: 6px 12px; /* Reduced padding on mobile */
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     .unique-menu-nav {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
@@ -1249,7 +1245,7 @@ footer .social-icons a:hover {
     .unique-menu-nav {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
     }
 
@@ -1263,39 +1259,6 @@ footer .social-icons a:hover {
 }
 
 
-
-
-/* Menu Items */
-.unique-menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.unique-menu-item {
-    width: 250px;
-    text-align: center;
-    margin: 10px;
-}
-
-.unique-menu-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.unique-menu-item h3 {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.unique-price {
-    margin-top: 10px;
-    color: #e74c3c;
-    font-size: 16px;
-}
 
 
 /* ---- */
@@ -1312,7 +1275,7 @@ footer .social-icons a:hover {
 
 .menu-item {
     cursor: pointer;
-    width: 250px;
+    width: 25%;
     text-align: center;
     border-radius: 10px;
     padding: 20px;
@@ -1345,12 +1308,13 @@ footer .social-icons a:hover {
     line-height: 1.6;
 }
 
-.additional-menu-items {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    /* padding: 40px 64px; */
-    padding: 30px 130px;
+@media screen and (max-width: 768px) {
+    .additional-menu-items {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
 }
 
 /* Price styling */
@@ -1437,8 +1401,8 @@ footer .social-icons a:hover {
     }
 
     .menu-image {
-        width: 100%;
-        height: 180px;
+        width: 60%;
+        height: 60%;
     }
 
     .stats-item {
@@ -1459,13 +1423,13 @@ footer .social-icons a:hover {
     }
 }
 /* ===================== Testimonials Section ===================== */
-.Testimonials-title{
+.Testimonials-title {
     background-color: #6e5e5e55;
     text-align: center;
     color: rgb(87, 84, 84);
     font-size: small;
 }
-.unique-section-title{
+.unique-section-title {
     background-color: #6e5e5e55;
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -1485,16 +1449,17 @@ footer .social-icons a:hover {
 }
 
 .swiper-slide {
-    width: 100%;      /* Make sure each slide takes up the full container width */
+    width: 100%;
+    /* Make sure each slide takes up the full container width */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 @media screen and (max-width: 768px) {
     .swiper-slide {
-        width: calc(100% - 20px); /* Slight padding for better alignment */
-        margin-right: 2px; /* Center-align spacing */
-        height: 300px; /* Adjust height for smaller screens */
+        width: calc(100% - 20px);
+        margin-right: 2px;
+        height: 300px;
     }
 }
 
@@ -1527,9 +1492,9 @@ footer .social-icons a:hover {
 }
 
 .unique-testimonial-image img {
-    width: 100px;         
-    height: 100px;        
-    border-radius: 50%;   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -1578,9 +1543,9 @@ footer .social-icons a:hover {
     width: 100%;
     padding: 0;
 }
-.swiper-container-secondary{
+.swiper-container-secondary {
     overflow-y: hidden;
-    scrollbar-width: none; 
+    scrollbar-width: none;
 }
 .swiper-container-secondar::-webkit-scrollbar {
     display: none;
@@ -1653,7 +1618,7 @@ footer .social-icons a:hover {
     margin: 0;
     font-size: 14px;
 }
-.wedding-card-title{
+.wedding-card-title {
     font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
@@ -1669,16 +1634,16 @@ footer .social-icons a:hover {
         background-position: center;
         overflow: hidden;
     }
-.card-content{
-    width: 60%;
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    color: white;
-    text-align: start;
-    font-size: 14px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-}
+    .card-content{
+        width: 60%;
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        color: white;
+        text-align: start;
+        font-size: 14px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
     .card2 {
         margin-left: 5%;
     }
@@ -1687,7 +1652,7 @@ footer .social-icons a:hover {
         font-size: 30px;
         margin: 10px 0;
     }
-    
+
     .wedding-card-title-second {
         margin: 0;
         font-size: 14px;
@@ -1720,11 +1685,11 @@ footer .social-icons a:hover {
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
 }
 
 .cheaf-section .cheaf-card {
-    width: 300px; /* Reduced width for better fit on smaller screens */
+    width: 300px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -1739,7 +1704,7 @@ footer .social-icons a:hover {
 }
 
 .cheaf-section .cheaf-card .card-image {
-    height: 300px; /* Adjusted for consistency */
+    height: 350px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1750,7 +1715,7 @@ footer .social-icons a:hover {
     bottom: 0;
     width: 100%;
     background-color: white;
-    padding: 15px;
+    padding: 24px;
     text-align: left;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     clip-path: polygon(0 0, 27% 32px, 57% 20px, 75% 32px, 100% 0, 100% 100%, 0 100%);
@@ -1815,9 +1780,12 @@ footer .social-icons a:hover {
     }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction {
-    bottom: var(--swiper-pagination-bottom,8px);
-    top: var(--swiper-pagination-top,auto);
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
     left: 0;
     width: 100%;
     display: none;
@@ -1892,14 +1860,13 @@ footer .social-icons a:hover {
     }
 
     .cheaf-section .cheaf-card:hover .sidebar {
-        right: 0; /* Slide in on hover */
-        transform: none; /* Consistent scale */
+        right: 0;
+        transform: none;
         opacity: 1;
         pointer-events: auto;
     }
 }
 
-/*----Input Group Styling ----*/
 .input-group {
     display: flex;
     justify-content: space-between;
@@ -1941,24 +1908,37 @@ footer .social-icons a:hover {
     background-color: darkred;
 }
 
-/* ----------------------------------*/
+@media screen and (max-width: 768px) {
+    .input-group {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* Align items vertically */
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+        /* Make fields take up full width */
+        margin-right: 0;
+        /* Remove right margin */
+        margin-bottom: 10px;
+        /* Add spacing between fields */
+    }
+
+    .form-submit {
+        text-align: center;
+        /* Keep submit button centered */
+    }
+}
+
+/* -------------Gallery section---------------------*/
 .gallery-slider {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-}
-
-.highlight-frame {
-    position: absolute;
-    top: 45%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 170px;
-    height: 174px;
-    border: 8px solid darkred;
-    z-index: 2;
-    pointer-events: none;
 }
 
 .slider-wrapper {
@@ -1970,24 +1950,55 @@ footer .social-icons a:hover {
 
 .slide {
     flex: 0 0 160px;
-    height: 160px;
+    height: auto;
     position: relative;
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, border 0.3s ease;
+    box-sizing: border-box;
+    border: 8px solid transparent;
+}
+
+.slide.active {
+    opacity: 1;
+    border-color: darkred;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
+
+@media screen and (max-width: 768px) {
+    .slider-wrapper {
+        gap: 3px;
+    }
+
+    .slide {
+        flex: 0 0 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider-wrapper {
+        gap: 3px;
+    }
+
+    .slide {
+        flex: 0 0 95%;
+        /* Ensure only one slide per view */
+    }
+}
+
 
 .slide.active {
     opacity: 1;
+    border: 8px solid darkred;
 }
 @media screen and (max-width: 768px) {
     .gallery-slider .slider-wrapper {
-        flex-wrap: nowrap; /* Ensure slides remain in a single row */
+        flex-wrap: nowrap;
     }
 }
 /* Pagination Style--- */
@@ -2011,35 +2022,37 @@ footer .social-icons a:hover {
     background-color: red;
 }
 
-    .cheaf-section .sidebar {
-        .sidebar {
-            position: fixed; /* Ensure it's anchored to the viewport */
-            top: 0;
-            right: -100%; /* Move it completely off-screen */
-            width: 300px; /* Sidebar width */
-            height: 100vh; /* Full height of the viewport */
-            background: #fff; /* Sidebar background */
-            transform: translateX(0); /* Prevent accidental scaling issues */
-            opacity: 0; /* Initially hidden */
-            pointer-events: none; /* Disable interactions */
-            transition: all 0.3s ease; /* Smooth transitions */
+.cheaf-section .sidebar {
+    .sidebar {
+        position: fixed;
+        /* Ensure it's anchored to the viewport */
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #fff;
+        transform: translateX(0); /* Prevent accidental scaling issues */
+        opacity: 0;
+        pointer-events: none; /* Disable interactions */
+        transition: all 0.3s ease; /* Smooth transitions */
+    }
+    @media (max-width: 768px) {
+        .sidebar{
+            width: 80px;
         }
-        @media (max-width: 768px) {
-            .sidebar{
-                width: 80px;
-            }
     }
     /* ========================prevent global scrolling==== */
     html, body {
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Disable horizontal scrolling */
+        overflow-x: hidden;
+        /* Disable horizontal scrolling */
         width: 100%;
     }
-    
+
 
     /* ===============Booking form============================== */
-/* ----developer used above sections code to partitions screen for this form */
+    /* ----developer used above sections code to partitions screen for this form */
     /* -----flex cards----- */
     .card-1 {
         display: flex;
@@ -2053,7 +2066,7 @@ footer .social-icons a:hover {
         text-align: center;
         padding: 20px;
     }
-    
+
     .flex-cards {
         display: flex;
         justify-content: space-between;
@@ -2063,7 +2076,7 @@ footer .social-icons a:hover {
         padding: 40px;
         background-color: #f3f3f3;
     }
-    
+
     .card {
         flex: 1 1 100%;
         min-width: 250px;
@@ -2078,20 +2091,20 @@ footer .social-icons a:hover {
         overflow: hidden;
         position: relative;
     }
-    
+
     .card-1 h1 {
         color: white;
         font-size: 32px;
         font-weight: bold;
         margin-bottom: 15px;
     }
-    
+
     .card-1 p {
         font-size: 18px;
         line-height: 1.6;
         margin-bottom: 20px;
     }
-    
+
     .card-1 button {
         padding: 10px 20px;
         background-color: #e32626;
@@ -2103,12 +2116,12 @@ footer .social-icons a:hover {
         display: block;
         margin: 20px auto 0;
     }
-    
+
     .card-1 button:hover {
         color: #ce1212;
         background-color: white;
     }
-    
+
     .card-2,
     .card-3,
     .card-4 {
@@ -2121,14 +2134,14 @@ footer .social-icons a:hover {
         padding: 20px;
         font-size: 18px;
     }
-    
+
     .card-2:hover,
     .card-3:hover,
     .card-4:hover {
         background-color: #f9f9f9;
         transition: background-color 0.3s ease;
     }
-    
+
     .card-2 h2,
     .card-3 h2,
     .card-4 h2 {
@@ -2136,15 +2149,15 @@ footer .social-icons a:hover {
         font-size: 24px;
         font-weight: bold;
     }
-    
+
     .card-2 p,
     .card-3 p,
     .card-4 p {
         font-size: 16px;
         margin-bottom: 20px;
     }
-    
-/* -------------multiple images with slider-frame--------------- */
+
+    /* -------------multiple images with slider-frame--------------- */
     .slider-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -2266,10 +2279,10 @@ footer .social-icons a:hover {
 .gallery-header-text {
     display: flex;
     flex-direction: column;
-    align-items: center;   
-    justify-content: center; 
-    text-align: center;     
-    height: 10vh;          
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 10vh;
 }
 
 .galary-small-text {
@@ -2534,4 +2547,3 @@ footer {
         font-size: 14px;
     }
 }
-
